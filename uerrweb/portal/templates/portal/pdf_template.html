@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: 30px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .content {
+    border: 1px solid #ccc;
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+</style>
+
+</head>
+<body>
+  <h1>Resposta Gerada por Inteligência Artificial</h1>
+
+  <div class="section">
+    <div class="label">URL analisada:</div>
+    <div class="content">{{ url }}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Pergunta:</div>
+    <div class="content">{{ pergunta }}</div>
+  </div>
+
+  <div class="section">
+    <div class="label">Resposta da IA:</div>
+    <div class="content">{{ resposta }}</div>
+  </div>
+</body>
+</html>

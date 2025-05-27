@@ -1,0 +1,8 @@
+Django>=4.2
+openai
+langchain
+python-dotenv
+requests
+beautifulsoup4
+reportlab
+xhtml2pdf
