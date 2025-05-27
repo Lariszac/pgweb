@@ -6,7 +6,7 @@ from .forms import PerguntaForm
 from dotenv import load_dotenv
 from reportlab.pdfgen import canvas
 from django.http import HttpResponse
-from .models import HistoricoPergunta  # <- Histórico no banco
+from .models import HistoricoPergunta  
 
 load_dotenv()
 
@@ -91,3 +91,7 @@ def baixar_pdf(request):
     if pisa_status.err:
         return HttpResponse(f'Erro ao gerar PDF: {pisa_status.err}')
     return response
+
+def historico(request):
+    registros = HistoricoPergunta.objects.order_by('-data')
+    return render(request, 'portal/historico.html', {'registros': registros})
